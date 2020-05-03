@@ -22,13 +22,13 @@ public abstract class AbstractTextParser {
     public TextComponent parse(String text) throws ParserException {
         AbstractValidator validator = new AbstractValidator();
         if(validator.isNull(text)){
-            LOG.error(text + " is null");
-            throw new ParserException(text + " is null");
+            LOG.error("Text is null");
+            throw new ParserException("Text is null");
         }
 
         if(validator.isNull(nextParser) ){
-            LOG.error(nextParser + " is null");
-            throw new ParserException(nextParser + " is null");
+            LOG.error("NextParser is null");
+            throw new ParserException("NextParser is null");
         }
 
         Pattern pattern = Pattern.compile(textComponentType.getRegexOfNextComponent());
