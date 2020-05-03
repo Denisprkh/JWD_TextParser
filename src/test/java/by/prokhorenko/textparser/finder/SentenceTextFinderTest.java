@@ -65,9 +65,6 @@ public class SentenceTextFinderTest {
         duplicatesSourceText = fileReader.readAll(linkToFileWithDuplicates);
         textWithDuplicates = textParser.parse(duplicatesSourceText);
         expectedDuplicateWords.put("good",3);
-
-
-
     }
 
     @Test
@@ -110,9 +107,4 @@ public class SentenceTextFinderTest {
         String duplicatesSourceText = null;
         TextComponent textWithDuplicates = null;
     }
-
-
-
-
-
 }
