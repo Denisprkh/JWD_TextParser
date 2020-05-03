@@ -20,8 +20,7 @@ public class FileReaderImpl implements Reader {
     private static final Logger LOG = LogManager.getLogger();
 
     public String  readAll(String link) throws ReaderException {
-
-
+        
         ClassLoader classLoader = getClass().getClassLoader();
         URL resourceURL = classLoader.getResource(link);
         URI resourceURI;
