@@ -57,5 +57,23 @@ public class Symbol implements TextComponent {
     public String toString(){
         return String.valueOf(character);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Symbol symbol = (Symbol) o;
+
+        if (textComponentType != symbol.textComponentType) return false;
+        return character != null ? character.equals(symbol.character) : symbol.character == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = textComponentType != null ? textComponentType.hashCode() : 0;
+        result = 31 * result + (character != null ? character.hashCode() : 0);
+        return result;
+    }
 }
 

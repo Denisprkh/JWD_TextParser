@@ -70,4 +70,22 @@ public class TextComposite implements TextComponent {
         return builder.toString();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        TextComposite that = (TextComposite) o;
+
+        if (textComponents != null ? !textComponents.equals(that.textComponents) : that.textComponents != null)
+            return false;
+        return textComponentType == that.textComponentType;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = textComponents != null ? textComponents.hashCode() : 0;
+        result = 31 * result + (textComponentType != null ? textComponentType.hashCode() : 0);
+        return result;
+    }
 }
