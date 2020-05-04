@@ -10,7 +10,6 @@ public class SymbolTextParser extends AbstractTextParser {
 
     private static final int CHAR_INDEX = 0;
 
-
     public SymbolTextParser(){
         this.textComponentType = TextComponentType.SYMBOL;
     }
